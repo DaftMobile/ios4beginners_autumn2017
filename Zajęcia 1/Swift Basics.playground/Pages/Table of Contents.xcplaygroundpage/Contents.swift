@@ -8,7 +8,6 @@
 3.	[Kolekcje](Collections)
 4.	[Optionale](Optionals)
 5.	[Control Flow](Control%20Flow)
-6.	[Enums](Enums)
-7.	[Funkcje](Functions)
-8.	[Klasy](Classes)
+6.	[Funkcje](Functions)
+7.	[Klasy](Classes)
 */
