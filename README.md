@@ -22,7 +22,7 @@ We were talking about the basics of Swift programming language:
 - Functions – defining a function with parameters in Swift (`func` keyword), return value type, calling functions, etc.
 - Classes – defining a basic class, defining methods, class properties, initializers. We've also discussed inheritance in Swift, overriding methods and initializers.
 
-To learn more, go through the [Swift Basics](./Zajęcia%201) playground.
+To learn more, go through the [Swift Basics](./Class%201) playground.
 
 _Next:_
 
