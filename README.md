@@ -24,9 +24,23 @@ We were talking about the basics of Swift programming language:
 
 To learn more, go through the [Swift Basics](./Class%201) playground.
 
-_Next:_
+### Class 2: Intermediate Swift and Introduction to AutoLayout
 
-Next week we'll discuss Swift structs, enums, and memory management. Then, we'll dive into iOS and its basic UI components! 📱😁
+We were talking about some more advanced concepts of Swift, including:
+
+- Enums!
+- Structs
+- Value Types vs Reference Types
+- Nested Types
+- Memory management in Swift
+
+To learn more, go through the [Swift Intermediate](./Class%202) playground.
+
+We've also started to talk about AutoLayout and basic usage of Interfac Builder in XCode.
+
+_Homework:_
+
+See home assignment [here](Assignments/Assignment1/assignment1.md).
 
 ## Resources
 
