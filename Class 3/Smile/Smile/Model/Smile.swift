@@ -18,4 +18,23 @@ class Smile {
 	init(level: Float) {
 		self.level = level
 	}
+
+	convenience init() {
+		self.init(level: 0.0)
+	}
+}
+
+extension Smile {
+	var description: String {
+		switch level {
+		case -1.0 ..< -0.4:
+			return "Sad 😫"
+		case -0.4 ... 0.4:
+			return "Meh... 😐"
+		case 0.4 ... 1.0:
+			return "Smile! 😁"
+		default:
+			fatalError("Unexpected smile level \(level)!")
+		}
+	}
 }

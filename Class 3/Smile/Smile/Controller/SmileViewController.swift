@@ -11,20 +11,27 @@ import UIKit
 class SmileViewController: UIViewController {
 
 	// MARK: - Model
-	let smile = Smile(level: 0)
+	let smile = Smile()
 
 	// MARK: - Views
 	@IBOutlet weak var slider: UISlider!
 	@IBOutlet weak var smileView: SmileView!
+	@IBOutlet weak var smileLabel: UILabel!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		smileView.dataSource = self
+		updateSmileLabel()
+	}
+
+	private func updateSmileLabel() {
+		smileLabel.text = smile.description
 	}
 	
 	@IBAction func sliderChanged(_ sender: UISlider) {
 		smile.level = sender.value * 2.0 - 1.0
 		smileView.setNeedsDisplay()
+		updateSmileLabel()
 	}
 }
 

@@ -8,9 +8,11 @@
 
 import UIKit
 
+/// This represents a smiling face view
 class SmileView: UIView {
+
+	/// A data source for the smile
 	weak var dataSource: SmileDataSource?
-	private let faceLineWidth: CGFloat = 3
 
 	private func drawEye(at point: CGPoint, size: CGSize, in context: CGContext) {
 		let eyeRect = CGRect(origin: point, size: .zero).insetBy(dx: -size.width * 0.5, dy: -size.height * 0.5)
@@ -27,20 +29,22 @@ class SmileView: UIView {
 	}
 
 	private func drawFace(rect: CGRect, in context: CGContext) {
+		let faceLineWidth: CGFloat = 3
+		let faceRect = rect.insetBy(dx: faceLineWidth * 0.5, dy: faceLineWidth * 0.5)
 		context.saveGState()
 		context.setFillColor(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))
-		context.fillEllipse(in: rect)
+		context.fillEllipse(in: faceRect)
 
 		context.setStrokeColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
 		context.setLineWidth(faceLineWidth)
-		context.strokeEllipse(in: rect)
+		context.strokeEllipse(in: faceRect)
 		context.restoreGState()
 	}
 
 	private func drawSmile(level: Float, in context: CGContext) {
-		let smileVerticalOffset = bounds.height * 0.15
-		let smileHorizontalOffset = bounds.width * 0.25
-		let maxSmileOffset: CGFloat = bounds.height * 0.15
+		let smileVerticalOffset = bounds.height * 0.18
+		let smileHorizontalOffset = bounds.width * 0.21
+		let maxSmileOffset: CGFloat = bounds.height * 0.14
 
 		let smileOffset = CGFloat(level) * maxSmileOffset
 		let smileCenter = CGPoint(x: bounds.midX, y: bounds.midY + smileVerticalOffset)
@@ -65,8 +69,7 @@ class SmileView: UIView {
 		guard let context = UIGraphicsGetCurrentContext() else { return }
 
 		// Step 1: Draw face shape
-		let faceRect = bounds.insetBy(dx: faceLineWidth * 0.5, dy: faceLineWidth * 0.5)
-		drawFace(rect: faceRect, in: context)
+		drawFace(rect: bounds, in: context)
 
 		// Step 2: Draw eyes
 		let eyeVerticalOffset = bounds.height * 0.14
