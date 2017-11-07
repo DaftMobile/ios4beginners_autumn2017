@@ -42,6 +42,8 @@ _Homework:_
 
 See home assignment [here](Assignments/Assignment1/assignment1.md).
 
+The solution to this assignment is available [here](Assignments/Assignment1/Solution).
+
 ## Resources
 
 - [Install Swift on Linux](https://swift.org/download/#releases) - we're using version `4.0`
