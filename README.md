@@ -44,6 +44,29 @@ See home assignment [here](Assignments/Assignment1/assignment1.md).
 
 The solution to this assignment is available [here](Assignments/Assignment1/Solution).
 
+### Class 3: iOS Design Patterns
+
+We were talking about Model View Controller application architecture pattern. This approach is strongly recommended by Apple, including all UIKit API designs. You can read more about Apple's interpretation of MVC [here](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html). That's the design pattern that is the easiest to use and understand in small apps (like those we will build during this class).
+
+In summary:
+
+1. Separate your classes into three categories:
+	- **Models**: The core of your app's logic. Your database, your business logic, your network requests, etc.
+	- **Views**: The most generic and reusable objects here. A `UILabel` and a `UIButton` are views (most of views are subclass of `UIView`) - they don't know anything about what they're displaying or what actions they perform.
+	- **Controllers**: Subclasses of `UIViewController`. Their responsibility is to display model data in the views, as well as handle user's actions and represent them to the model
+2. Don't let **views** and **models** communicate! Ever! ✋🛑
+3. Controllers should own their models.
+4. Controllers should own their views.
+5. Views communicate with their controllers by [**target-action**](https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) mechanism, or by [**delegation**](https://developer.apple.com/library/content/documentation/General/Conceptual/CocoaEncyclopedia/DelegatesandDataSources/DelegatesandDataSources.html) (via `weak` variables and protocols).
+6. Models communicate with controllers by notifications (see [`NotificationCenter`](https://developer.apple.com/documentation/foundation/notificationcenter)) (to inform about updates) or by completion [**closures**](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html).
+
+###### Examples:
+During this class we've built two sample apps. They both utilize the MVC approach, which works perfectly here. Check out our [Smile App](./Class%203/Smile), and our [Button Counter](./Class%203/ButtonCounter) app.
+
+In case you're wondering if MVC is a real life example: in heavier apps like [RocketLuncher](https://itunes.apple.com/app/id1167572430) we use MVVM design pattern. It separates UI actions from model actions and model manipulation, which is very useful in bigger apps.
+
+You can read all about *MVC*, *MVVM* and other iOS Design Patterns in [this great article](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52) by Bohdan Orlov.
+
 ## Resources
 
 - [Install Swift on Linux](https://swift.org/download/#releases) - we're using version `4.0`
