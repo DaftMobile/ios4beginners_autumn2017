@@ -21,6 +21,9 @@ Ułożenie elementów na ekranie dowolne. Pamiętaj jednak:
 
 Dowcipy mają być pobierane z dedykowanego serwera. Wszytkie informacje dotyczące pobrania dowcipu są dostępne w dokumentacji serwera [tutaj](https://github.com/DaftMobile/switter).
 
+![Screenshot 1](s1.png)
+![Screenshot 2](s2.png)
+
 ### Wskazówki
 
 1. Użyj `URLSession` do pobierania nowego dowcipu. Użyj konfiguracji `ephemeral`.
