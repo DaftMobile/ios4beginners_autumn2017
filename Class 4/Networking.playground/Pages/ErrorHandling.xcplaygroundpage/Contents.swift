@@ -13,19 +13,23 @@ struct Item {
 	var count: Int
 }
 
+extension Item: CustomDebugStringConvertible {
+	var debugDescription: String { return "ITEM[\(count)]: \(price)" }
+}
+
 class VendingMachine {
-	private(set) var inventory = [
+	private var inventory = [
 		"Candy Bar": Item(price: 12, count: 7),
 		"Chips": Item(price: 10, count: 4),
 		"Pretzels": Item(price: 7, count: 11)
 	]
 	private(set)var coinsDeposited = 0
 
-	func depoit(coins: Int) {
+	func deposit(coins: Int = 1) {
 		coinsDeposited += coins
 	}
 
-	func vend(itemNamed name: String) throws {
+	func vend(itemNamed name: String) throws -> Item {
 		guard let item = inventory[name] else {
 			throw VendingMachineError.invalidSelection
 		}
@@ -44,18 +48,20 @@ class VendingMachine {
 		newItem.count -= 1
 		inventory[name] = newItem
 
-		print("Dispensing \(name)")
+		return Item(price: item.price, count: 1)
 	}
 }
 
 let vendingMachine = VendingMachine()
-vendingMachine.depoit(coins: 50)
+//TODO: Deposit some coins
+//vendingMachine.deposit(coins: )
 
 do {
-	try vendingMachine.vend(itemNamed: "Chips")
+	// TODO: Try vending here
 } catch {
-	print(error)
+	// TODO: Handle errors here
 }
 
+//TODO: Try using the `try?` and `try!` operators and see what comes back
 
 //: [Next](@next)

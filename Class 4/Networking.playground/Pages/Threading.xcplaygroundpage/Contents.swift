@@ -6,7 +6,6 @@ import PlaygroundSupport
 
 //: This tells the Playground that we'll be dealing with THREADING, so that the execution doesn't stop when it reaches the end of the playground
 PlaygroundPage.current.needsIndefiniteExecution = true
-
 print("Starting execution")
 
 //: ### Basic background job
@@ -31,7 +30,7 @@ DispatchQueue.global().async {
 
 //: Sometimes you need to pass a value from the background Queue to the main Queue
 //: WARNING: ONLY WORK WITH UIKIT APIS ON THE MAIN QUEUE
-
+/*
 let label = UILabel()
 DispatchQueue.global().async {
 	var sumOfRandoms: Int32 = 0
@@ -45,6 +44,6 @@ DispatchQueue.global().async {
 		PlaygroundPage.current.finishExecution()
 	}
 }
-
+*/
 
 //: [Next](@next)
