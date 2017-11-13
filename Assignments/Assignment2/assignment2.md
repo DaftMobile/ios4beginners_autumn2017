@@ -31,6 +31,7 @@ Dowcipy mają być pobierane z dedykowanego serwera. Wszytkie informacje dotycz�
 3. Przeczytaj [dokumentację serwera]((https://github.com/DaftMobile/switter)) i pamiętaj o headerze `x-device-uuid` - użyj API [`UIDevice`](https://developer.apple.com/documentation/uikit/uidevice) i metody `identifierForVendor`
 4. Pamiętaj żeby **NIGDY** nie korzystać z funkcji `UIKit` w Background Queue
 5. Jeżeli chcesz żeby `UILabel` sam złamał linię, kiedy nie mieści się na ekranie – zerknij na property `numberOfLines`
+6. Pamiętaj, że `Closure` domyślnie trzyma **silną referencję** do łapanych stałych i zmiennych (capture list). W przypadku threading APIs i odnoszenia się do `ViewControllera` przez completion closure, konieczne jest poprawne użycie **capture list**, żeby uniknąć **cykli referencji**, a co za tym idzie potencjalnych wycieków pamięci. Więcej informacji o `Closures` i `Capture Lists` znajdziesz [tutaj](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html) oraz w rozdziale *Capturing Values*.
 
 ### Kryteria oceny
 
@@ -39,6 +40,7 @@ Dowcipy mają być pobierane z dedykowanego serwera. Wszytkie informacje dotycz�
 3. Poprawna konfiguracja `URLSession`
 4. Poprawne użycie `DispatchQueue`
 5. Poprawne użycie ModelViewController
+6. Poprawne zarządzanie pamięcią (brak wycieków pamięci i cykli referencji!)
 
 ### Odpowiedzi
 
