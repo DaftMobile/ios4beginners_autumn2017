@@ -27,9 +27,4 @@ let endpoint = "https://switter.int.daftcode.pl/api/hello"
 6. Finally, print the String!
 */
 
-URLSession.shared.dataTask(with: url) { (data, response, error) in
-
-}
-PlaygroundPage.current.finishExecution()
-
 //: [Next](@next)
