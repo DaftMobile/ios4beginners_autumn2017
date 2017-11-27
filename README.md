@@ -79,6 +79,33 @@ _Homework:_
 
 See home assignment [here](Assignments/Assignment2/assignment2.md).
 
+### Class 5: UIKit Views, UIScrollView, UITableView
+
+We've discussed [closures and capture lists](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html) in Swift. Remember that closure capture surrounding values with **strong** references, so remember about avoiding reference cycles with Capture Lists.
+
+Next, we've talked about some UIKit basics:
+
+1. View hierarchy
+2. UIView and subclasses
+3. Concept of adding a `subview`, and a `superview`
+4. Coordinate system on iOS
+5. `UIScrollView` (i **highly** recommend all UIScrollView videos from WWDC [here](https://developer.apple.com/videos/))
+6. [`UITableView`](https://developer.apple.com/documentation/uikit/uitableview) concept. Data source + delegate design pattern, the concept of cell reuse
+
+
+### Class 6: Controllers of Controllers, UICollectionView
+
+Think of `UICollectionView` as a `UITableView` on steroids. It's a better version of a TableView (that's just a little harder to use and understand, but **much** more powerful and flexible). If you need to display some data that could be arranged and represents more than one object of the same kind, **use `UICollectionView`**!
+
+1. The datasource concept is basically the same
+2. [`UICollectionViewLayout`](https://developer.apple.com/documentation/uikit/uicollectionviewlayout) is the object responsible for positioning **Cells**, **Supplementary Views** and **Decoration Views** in the collection.
+3. `UICollectionViewFlowLayout` (this is where UIKit class and method names get veeeery long) is the only concrete subclass on `UICollectionViewLayout` provided with `UIKit`. It **will suit your needs** 90% of the time!!!
+4. Subclass `UICollectionViewCell` to get your content on screen.
+5. CollectionViews with custom layouts are **powerful**. You can easily create layouts like in Instagram app (the main photo feed), or Apple Calendar (all built on `UICollectionView` and some subclasses of `UICollectionViewFlowLayout`)
+
+[`UINavigationController`](https://developer.apple.com/documentation/uikit/uinavigationcontroller) is a controller of controllers. It manages the navigation stack of the app. It provides the default `NavigationBar` UI, which displays current viewcontroller's title, as well as a back arrow (if there is another viewcontroller on the stack).
+You typically call `pushViewController(_:animated:)` on `self.navigationController` from a parent View Controller, or use a Segue when creating your hierarchy in a Storyboard.
+
 ## Resources
 
 - [Install Swift on Linux](https://swift.org/download/#releases) - we're using version `4.0`
