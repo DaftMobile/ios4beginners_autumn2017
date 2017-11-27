@@ -25,7 +25,11 @@ class ParentViewController: UIViewController {
 	}
 
 	@objc func push() {
-		print("TODO")
+		//Step 1: Create child view controller
+		//Step 2: Push child onto navigation stack
+		let childViewController = ChildViewController()
+		self.navigationController?.pushViewController(childViewController, animated: true)
+
 	}
 }
 
