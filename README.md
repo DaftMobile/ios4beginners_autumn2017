@@ -106,6 +106,10 @@ Think of `UICollectionView` as a `UITableView` on steroids. It's a better versio
 [`UINavigationController`](https://developer.apple.com/documentation/uikit/uinavigationcontroller) is a controller of controllers. It manages the navigation stack of the app. It provides the default `NavigationBar` UI, which displays current viewcontroller's title, as well as a back arrow (if there is another viewcontroller on the stack).
 You typically call `pushViewController(_:animated:)` on `self.navigationController` from a parent View Controller, or use a Segue when creating your hierarchy in a Storyboard.
 
+_Homework:_
+
+See the **final** home assignment [here](Assignments/Assignment3/assignment3.md).
+
 ## Resources
 
 - [Install Swift on Linux](https://swift.org/download/#releases) - we're using version `4.0`
