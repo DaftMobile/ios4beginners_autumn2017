@@ -42,8 +42,6 @@ _Homework:_
 
 See home assignment [here](Assignments/Assignment1/assignment1.md).
 
-The solution to this assignment is available [here](Assignments/Assignment1/Solution).
-
 ### Class 3: iOS Design Patterns
 
 We were talking about Model View Controller application architecture pattern. This approach is strongly recommended by Apple, including all UIKit API designs. You can read more about Apple's interpretation of MVC [here](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html). That's the design pattern that is the easiest to use and understand in small apps (like those we will build during this class).
