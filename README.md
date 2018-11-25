@@ -59,7 +59,7 @@ In summary:
 6. Models communicate with controllers by notifications (see [`NotificationCenter`](https://developer.apple.com/documentation/foundation/notificationcenter)) (to inform about updates) or by completion [**closures**](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html).
 
 ###### Examples:
-During this class we've built two sample apps. They both utilize the MVC approach, which works perfectly here. Check out our [Smile App](./Class%203/Smile), and our [Button Counter](./Class%203/ButtonCounter) app.
+During this class we've built two sample apps. They both utilize the MVC approach, which works perfectly here. Check out our [Button Counter](./Class%203/ButtonCounter) app.
 
 In case you're wondering if MVC is a real life example: in heavier apps like [RocketLuncher](https://itunes.apple.com/app/id1167572430) we use MVVM design pattern. It separates UI actions from model actions and model manipulation, which is very useful in bigger apps.
 
