@@ -109,3 +109,4 @@ fastlane/test_output
 Icon?
 **/Solutions
 *.key
+*.numbers
